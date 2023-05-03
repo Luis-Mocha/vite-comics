@@ -62,12 +62,12 @@
 
 <template>
     <header class="container">
-        <img src="/img/dc-logo.png" alt="">
+        <img src="/img/dc-logo.png" alt="DC Logo">
         
         <nav>
             <ul>
-                <li v-for="(elem, index) in menuLinks" :key="index">
-                    <a :class="( elem.current === true ) ? 'active' : '' " href="">
+                <li v-for="(elem, index) in menuLinks" :key="index" :class="( elem.current === true ) ? 'active' : '' ">
+                    <a  href="">
                         {{ elem.nome }}
                     </a>
                 </li>
@@ -118,6 +118,12 @@
                         font-weight: 600;
                     }
                 }
+
+                li.active{
+                    color: $blue-dc;
+                    border-bottom: 5px solid $blue-dc;
+                }
+
             }
             
         }
