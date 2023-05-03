@@ -13,3 +13,15 @@
         justify-content: space-around;
 }
 }
+
+@mixin flexAlignItems($type: 'center') {
+    display: flex;
+
+    @if $type == 'center' {
+        align-items: center;
+    } @else if $type == 'flex-end' {
+        align-items: flex-end;
+    } @else if $type == 'flex-start' {
+        align-items: flex-start;
+    } 
+}

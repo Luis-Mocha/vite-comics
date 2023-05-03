@@ -61,12 +61,9 @@
 </script>
 
 <template>
-    <header class="bg-danger container">
-        <div class="logo">
-            <img src="/img/dc-logo.png" alt="">
-        </div>
+    <header class="container">
+        <img src="/img/dc-logo.png" alt="">
         
-
         <nav>
             <ul>
                 <li v-for="(elem, index) in menuLinks" :key="index">
@@ -83,29 +80,38 @@
 <style scoped lang="scss">
     // @use '../style/main.scss';
     @use '../style/partials/_mixin.scss' as *; //per poter usare mixin
+    @use '../style/partials/variables' as *;
 
     header{
         @include flexJustify(space-between);
         height: 120px;
         padding: 0;
-
-        .logo {
-            img {
-                height: 80px;
-            }
+        
+        img {
+            height: 100px;
         }
 
         nav {
             height: 100%;
-            display: flex;
-            align-items: center;
             
             ul{
-                display: flex;
+                // display: flex;
+                // align-items: center;
+                @include flexAlignItems();
+                height: 100%;
 
                 li {
+                    height: 100%;
+                    @include flexAlignItems();
+
                     list-style-type: none;
                     margin-left: 30px;
+                    border-bottom: 5px solid transparent;
+                    
+                    &:hover{
+                        color: $blue-dc;
+                        border-bottom: 5px solid $blue-dc;
+                    }
 
                     a{
                         text-transform: uppercase;
