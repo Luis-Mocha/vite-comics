@@ -61,8 +61,11 @@
 </script>
 
 <template>
-    <header>
-        <img src="/img/dc-logo.png" alt="">
+    <header class="bg-danger container">
+        <div class="logo">
+            <img src="/img/dc-logo.png" alt="">
+        </div>
+        
 
         <nav>
             <ul>
@@ -82,19 +85,32 @@
     @use '../style/partials/_mixin.scss' as *; //per poter usare mixin
 
     header{
-        display: flex;
+        @include flexJustify(space-between);
+        height: 120px;
+        padding: 0;
+
+        .logo {
+            img {
+                height: 80px;
+            }
+        }
 
         nav {
-            display: block;
-            width: 100%;
-
+            height: 100%;
+            display: flex;
+            align-items: center;
+            
             ul{
-                // display: flex;
-                // justify-content: space-between;
-                @include flexJustify(space-between);
+                display: flex;
 
                 li {
                     list-style-type: none;
+                    margin-left: 30px;
+
+                    a{
+                        text-transform: uppercase;
+                        font-weight: 600;
+                    }
                 }
             }
             

@@ -12,7 +12,7 @@
 </script>
 
 <template>
-  
+
   <HeaderComp/>
 
 </template>
