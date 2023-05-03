@@ -78,18 +78,20 @@
 </template>
 
 <style scoped lang="scss">
-    @use '../style/main.scss';
+    // @use '../style/main.scss';
+    @use '../style/partials/_mixin.scss' as *; //per poter usare mixin
 
     header{
         display: flex;
 
         nav {
             display: block;
+            width: 100%;
 
             ul{
-                display: flex;
-                // margin: 0;
-                // padding: 0;
+                // display: flex;
+                // justify-content: space-between;
+                @include flexJustify(space-between);
 
                 li {
                     list-style-type: none;

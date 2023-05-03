@@ -12,11 +12,12 @@
 </script>
 
 <template>
-  <h1>prova prova</h1>
-  <HeaderComp/>
   
+  <HeaderComp/>
+
 </template>
 
-<style scoped>
+<style lang="scss">
+  @use './style/main.scss';
 
 </style>

@@ -1,1 +1,14 @@
 // "Funzioni" di style
+@mixin flexJustify($type: 'center') {
+    display: flex;
+
+    @if $type == 'center' {
+        justify-content: center;
+    } @else if $type == 'space-between' {
+        justify-content: space-between;
+    } @else if $type == 'space-evenly' {
+        justify-content: space-evenly;
+    } @else if $type == 'space-around' {
+    justify-content: space-around;
+}
+}
