@@ -64,44 +64,46 @@
 
 <template>
     <footer>
-        <div class="container h-100 d-flex justify-content-between">
+        <div class="container h-100 py-2">
+            <div class="list-container">
+                <!-- cd-comics e shop -->
+                <div class="colonna-footer d-flex flex-column">
+                    <!-- dc-comics -->
+                    <div>
+                        <span>
+                            dc-comics
+                        </span>
+                        <ul>
+                            <li v-for="(elem, index) in menuLinks" :key="index">
+                                <a :href="elem.url" class="text-capitalize fw-light">
+                                    {{ elem.nome }}
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
 
-            <div class="footer-list text-light w-50 py-2">
-                <!-- dc-comics -->
-                <div>
-                    <span>
-                        dc-comics
-                    </span>
-                    <ul>
-                        <li v-for="(elem, index) in menuLinks" :key="index">
-                            <a :href="elem.url" class="text-capitalize fw-light">
-                                {{ elem.nome }}
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-
-                <!-- shop -->
-                <div>
-                    <span>
-                        shop
-                    </span>
-                    <ul class="text-capitalize fw-light">
-                        <li>
-                            <a href="#">
-                                shop DC
-                            </a>
-                        </li>
-                        <li>
-                            <a href="#">
-                                shop DC collectibles
-                            </a>
-                        </li>
-                    </ul>
+                    <!-- shop -->
+                    <div>
+                        <span>
+                            shop
+                        </span>
+                        <ul class="text-capitalize fw-light">
+                            <li>
+                                <a href="#">
+                                    shop DC
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    shop DC collectibles
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
                 <!-- DC -->
-                <div>
+                <div class="colonna-footer">
                     <span>
                         dc
                     </span>
@@ -114,8 +116,8 @@
                     </ul>
                 </div>
 
-                 <!-- sites-->
-                 <div>
+                <!-- sites-->
+                <div class="colonna-footer">
                     <span>
                         sites
                     </span>
@@ -147,11 +149,7 @@
                         </li>
                     </ul>
                 </div>
-            </div>
-
-            <div class="dc-logo">
-            </div>
-            
+            </div> 
         </div>
     </footer>
     
@@ -163,43 +161,47 @@
     @use '../style/partials/variables' as *;
 
     footer {
-        height: 420px;
         background-color: red;
         background-image: url(img/footer-bg.jpg);
         background-size: cover;
         background-position: center;
     }
+    .container {
+        background-image: url(/img/dc-logo-bg.png) ;
+        background-size: 50%;
+        background-repeat: no-repeat;
+        background-position: right;
 
-    .footer-list {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
+        color: white;
+        // @include flexAlignItems();
+        
 
-        div {
-            margin-top: 10px;
-            margin-right: 15px;
+        .list-container {
+            width: 60%;
+            display: flex;
+            padding: 20px 0;
+            // flex-direction: column;
+            // flex-wrap: wrap;
 
-            span {
-                font-size: 18px;
-                line-height: 2;
-                font-weight: 800;
-                text-transform: uppercase;
-            }
+            .colonna-footer {
+                margin-right: 20px;
 
-            a {
-                &:hover{
-                    text-decoration: underline;
+                span {
+                    font-size: 18px;
+                    line-height: 2;
+                    font-weight: 800;
+                    text-transform: uppercase;
+                }
+
+                li{
+                    a {
+                        &:hover{
+                            text-decoration: underline;
+                        }
+                    }   
                 }
             }
         }
-    }
-
-    .dc-logo {
-        width: 50%;
-        background-image: url(/img/dc-logo-bg.png) ;
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
     }
  
 </style>
