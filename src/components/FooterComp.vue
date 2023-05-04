@@ -63,7 +63,7 @@
 </script>
 
 <template>
-    <div class="footerComp">
+    <footer>
         <div class="container h-100 d-flex justify-content-between">
 
             <div class="footer-list text-light w-50 py-2">
@@ -153,7 +153,7 @@
             </div>
             
         </div>
-    </div>
+    </footer>
     
 </template>
 
@@ -162,7 +162,7 @@
     @use '../style/partials/_mixin.scss' as *; //per poter usare mixin
     @use '../style/partials/variables' as *;
 
-    .footerComp {
+    footer {
         height: 420px;
         background-color: red;
         background-image: url(img/footer-bg.jpg);
@@ -187,8 +187,6 @@
         }
     }
 
-
-
     .dc-logo {
         width: 50%;
         background-image: url(/img/dc-logo-bg.png) ;
@@ -196,7 +194,5 @@
         background-repeat: no-repeat;
         background-position: center;
     }
-
-
-     
+ 
 </style>
