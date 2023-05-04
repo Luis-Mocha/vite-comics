@@ -47,5 +47,16 @@
             text-transform: uppercase;
         }
     }
+    .comic-card {
+        @media screen and (max-width: 1000px ){
+            width: calc(100% / 4 - 15px );
+        }
+        @media screen and (max-width: 768px ){
+            width: calc(100% / 3 - 15px );
+        }
+        @media screen and (max-width: 576px ){
+            width: calc(100% / 2 - 10px );
+        }
+    }
 
 </style>
