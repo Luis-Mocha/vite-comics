@@ -3,6 +3,8 @@
   import BuyComp from './components/BuyComp.vue';
   import FooterComp from './components/FooterComp.vue';
   import SocialComp from './components/SocialComp.vue';
+  import MainComp from './components/MainComp.vue';
+
 
 
   export default{
@@ -12,6 +14,7 @@
       BuyComp,
       FooterComp,
       SocialComp,
+      MainComp,
     }
   }
 
@@ -20,9 +23,7 @@
 <template>
 
   <HeaderComp/>
-  <div class="bg-dark py-5">
-    <div class="text-light text-center">Content Goes Here</div>
-  </div>
+  <MainComp/>
   <BuyComp/>
   <FooterComp/>
   <SocialComp/>
