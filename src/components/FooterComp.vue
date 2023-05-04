@@ -177,12 +177,19 @@
 
         div {
             margin-top: 10px;
+            margin-right: 15px;
 
             span {
                 font-size: 18px;
                 line-height: 2;
                 font-weight: 800;
                 text-transform: uppercase;
+            }
+
+            a {
+                &:hover{
+                    text-decoration: underline;
+                }
             }
         }
     }
