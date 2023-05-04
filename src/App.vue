@@ -1,11 +1,13 @@
 <script>
-// import HelloWorld from './components/HelloWorld.vue'
-  import HeaderComp from './components/HeaderComp.vue'
+  import HeaderComp from './components/HeaderComp.vue';
+  import BuyComp from './components/BuyComp.vue'
+
 
   export default{
     name: 'App',
     components: {
       HeaderComp,
+      BuyComp,
     }
   }
 
@@ -14,6 +16,10 @@
 <template>
 
   <HeaderComp/>
+  <div class="bg-dark py-5">
+    <div class="text-light text-center">Content Goes Here</div>
+  </div>
+  <BuyComp/>
 
 </template>
 

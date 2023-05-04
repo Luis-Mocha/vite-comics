@@ -84,11 +84,11 @@
 
     header{
         @include flexJustify(space-between);
-        height: 120px;
+        height: 100px;
         padding: 0;
         
         img {
-            height: 100px;
+            height: 80px;
         }
 
         nav {

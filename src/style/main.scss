@@ -3,7 +3,7 @@
 
 // informazioni universali
 * {
-    margin: 0;
+    // margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
@@ -11,6 +11,10 @@
 ul {
     margin: 0;
     padding: 0;
+}
+
+li {
+    list-style-type: none;
 }
 
 a {
