@@ -32,7 +32,7 @@
     .comic-card {
         color: white;
         width: calc(100% / 6 - 15px );
-        margin-bottom: 20px ;
+        margin-bottom: 30px ;
 
         img {
             display: block;

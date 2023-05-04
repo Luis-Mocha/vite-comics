@@ -91,12 +91,18 @@
 
 <template>
     <div class="mainComp">
-        <div class="container d-flex">
-            <!-- <div v-for="(elem, index) in comicInfo" :key="index" class="text-light d-flex flex-column">
-                <img :src="elem.thumb" alt="">
-                <h2>{{ elem.series }}</h2>
-            </div> -->
-            <SingleCardComp v-for="(elem, index) in comicInfo" :key="index" :dettagliComic="elem"/>
+        <div class="jumbo">
+        </div>
+
+        <div class="container">
+            <span class="currentSeries">
+                Current Series
+            </span>
+
+            <div class="pt-5">
+                <SingleCardComp v-for="(elem, index) in comicInfo" :key="index" :dettagliComic="elem"/>
+            </div>
+            
         </div>
 
     </div>
@@ -110,12 +116,32 @@
 
     .mainComp {
         background-color: rgb(28,28,28);
-        padding: 30px 0;
+
+        .jumbo {
+            height: 300px;
+            margin-bottom: 0px;
+            background-image: url(/img/jumbotron.jpg);
+            background-size: cover;
+            
+        }
 
         div {
             display: flex;
             flex-wrap: wrap;
             justify-content: space-between;
+            position: relative;
+
+            .currentSeries{
+                color: white;
+                text-transform: uppercase;
+                font-weight: 800;
+                background-color: $blue-dc;
+                padding: 10px;
+                position: absolute;
+                z-index: 999;
+                top: 0;
+                transform: translate(0 , -50%);
+            }
         }
     }
 
