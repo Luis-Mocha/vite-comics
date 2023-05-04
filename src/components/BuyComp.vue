@@ -60,7 +60,7 @@
     .BuyComp {
         background-color: $blue-dc;
         color: white;
-        height: 130px;
+        padding: 30px 0;
         @include flexAlignItems();
 
         ul{
@@ -68,6 +68,7 @@
             flex-wrap: wrap;
 
             li{
+                margin: 10px 0;
                 display: flex;
                 @include flexAlignItems();
 
