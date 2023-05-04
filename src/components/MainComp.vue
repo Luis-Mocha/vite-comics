@@ -1,11 +1,18 @@
 <script>
+    // importo il componente figlio
+    import SingleCardComp from './SingleCardComp.vue'
+
     export default{
         name: "MainComp",
+        //esporto i componenti
+        components: {
+            SingleCardComp
+        },
         data(){
             return {
-                cardinfo: [
+                comicInfo: [
                     {
-                        thumb: "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
+                        "thumb": "https://www.coverbrowser.com/image/action-comics/1-1.jpg",
                         "price": "$19.99",
                         "series": "Action Comics",
                         "type": "comic book",
@@ -84,11 +91,12 @@
 
 <template>
     <div class="mainComp">
-        <div class="container d-flex flex-wrap">
-            <div v-for="(elem, index) in cardinfo" :key="index" class="text-light d-flex flex-column">
+        <div class="container d-flex">
+            <!-- <div v-for="(elem, index) in comicInfo" :key="index" class="text-light d-flex flex-column">
                 <img :src="elem.thumb" alt="">
                 <h2>{{ elem.series }}</h2>
-            </div>
+            </div> -->
+            <SingleCardComp v-for="(elem, index) in comicInfo" :key="index" :dettagliComic="elem"/>
         </div>
 
     </div>
@@ -102,6 +110,13 @@
 
     .mainComp {
         background-color: rgb(28,28,28);
+        padding: 30px 0;
+
+        div {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
     }
 
 
