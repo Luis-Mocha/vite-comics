@@ -102,6 +102,10 @@
             <div class="pt-5">
                 <SingleCardComp v-for="(elem, index) in comicInfo" :key="index" :dettagliComic="elem"/>
             </div>
+
+            <button class="loadButton">
+                load more
+            </button>
             
         </div>
 
@@ -141,6 +145,17 @@
                 z-index: 999;
                 top: 0;
                 transform: translate(0 , -50%);
+            }
+
+            .loadButton {
+                background-color: $blue-dc;
+                color: white;
+                text-transform: uppercase;
+                font-weight: 700;
+                padding: 5px 30px;
+                margin: 20px auto;
+
+
             }
         }
     }
