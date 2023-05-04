@@ -67,7 +67,7 @@
         <nav>
             <ul>
                 <li v-for="(elem, index) in menuLinks" :key="index" :class="( elem.current === true ) ? 'active' : '' ">
-                    <a  href="">
+                    <a  href="#">
                         {{ elem.nome }}
                     </a>
                 </li>
@@ -98,6 +98,7 @@
                 // display: flex;
                 // align-items: center;
                 @include flexAlignItems();
+                flex-wrap: wrap;
                 height: 100%;
 
                 li {

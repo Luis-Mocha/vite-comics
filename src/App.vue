@@ -1,6 +1,7 @@
 <script>
   import HeaderComp from './components/HeaderComp.vue';
-  import BuyComp from './components/BuyComp.vue'
+  import BuyComp from './components/BuyComp.vue';
+  import FooterComp from './components/FooterComp.vue';
 
 
   export default{
@@ -8,6 +9,7 @@
     components: {
       HeaderComp,
       BuyComp,
+      FooterComp,
     }
   }
 
@@ -20,6 +22,7 @@
     <div class="text-light text-center">Content Goes Here</div>
   </div>
   <BuyComp/>
+  <FooterComp/>
 
 </template>
 

@@ -65,6 +65,7 @@
 
         ul{
             @include flexJustify(space-between);
+            flex-wrap: wrap;
 
             li{
                 display: flex;
