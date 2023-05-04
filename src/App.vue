@@ -2,6 +2,7 @@
   import HeaderComp from './components/HeaderComp.vue';
   import BuyComp from './components/BuyComp.vue';
   import FooterComp from './components/FooterComp.vue';
+  import SocialComp from './components/SocialComp.vue';
 
 
   export default{
@@ -10,6 +11,7 @@
       HeaderComp,
       BuyComp,
       FooterComp,
+      SocialComp,
     }
   }
 
@@ -23,6 +25,7 @@
   </div>
   <BuyComp/>
   <FooterComp/>
+  <SocialComp/>
 
 </template>
 
