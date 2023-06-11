@@ -123,7 +123,6 @@
 
         .jumbo {
             height: 300px;
-            margin-bottom: 0px;
             background-image: url(/img/jumbotron.jpg);
             background-size: cover;
             
